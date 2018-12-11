@@ -1,0 +1,77 @@
+@import "normalize.css";
+@import "vars";
+@import "fonts";
+@import "libs";
+@import "mixins/clear";
+
+body {
+	position: relative;
+	margin: 0 auto;
+	min-width: 320px;
+	max-width: 1920px;
+
+	font-size: 16px;
+	font-family: $default-font;
+
+	color: $text;
+	background: linear-gradient(5deg, #c6dff2, #b7d5ec);
+
+	input {
+
+		&:focus:required:invalid {
+			border-color: purple;
+		}
+		&:required:valid {
+			border-color: green;
+		}
+	}
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.button {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 165px;
+  padding: 10px 45px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  color: $light;
+	background-color: $background-normal;
+  border: 0;
+  border-radius: 20px;
+  cursor: pointer;
+
+	&:hover {
+
+    background-color: $background-hover;
+
+    transition: 0.2s;
+  }
+
+  &:active {
+
+    background-color: $background-normal;
+
+    transition: 0.2s;
+    }
+}
+
+@import "blocks/header.scss";
