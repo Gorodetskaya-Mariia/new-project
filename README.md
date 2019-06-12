@@ -1,6 +1,2 @@
-# Header
-
-## About project
-
-### Subheader
+a blank to start new project with gulp
 
